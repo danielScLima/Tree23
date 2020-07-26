@@ -17,14 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    btree.cpp \
     libtotree23.cpp \
-    nodeOfBTree.cpp
+    submodules/BTree/btree.cpp \
+    submodules/BTree/nodeOfBTree.cpp
 
 HEADERS += \
-    btree.h \
     libtotree23.h \
-    nodeOfBTree.h
+    submodules/BTree/btree.h \
+    submodules/BTree/nodeOfBTree.h
 
 # Default rules for deployment.
 unix {
