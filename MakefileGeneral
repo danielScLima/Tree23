@@ -1,0 +1,21 @@
+RM := rm -rf
+TARGET := program
+OBJS := nodeOfBTree.o btree.o tree23.o program.o
+SRCS := nodeOfBTree.cpp btree.cpp tree23.cpp program.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS) $(SRCS)
+	@echo 'Building ' $(TARGET)
+#	@g++ -Wall -ggdb3 -o $(TARGET) $(OBJS)
+	@g++ -o $(TARGET) $(OBJS)
+	@echo 'End of build'
+	
+%.o: %.cpp
+	@echo 'Building $@ from $<'
+#	@g++ -Wall -ggdb3 -o $@ -c $<
+	@g++ -o $@ -c $<
+	
+clean:
+	@echo "cleaning"
+	$(RM) $(OBJS) $(TARGET)

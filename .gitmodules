@@ -1,0 +1,3 @@
+[submodule "submodules/BTree"]
+	path = submodules/BTree
+	url = https://github.com/danielScLima/BTree.git
