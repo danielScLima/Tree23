@@ -1,19 +1,20 @@
 RM := rm -rf
 TARGET := program
-OBJS := subprojects/LibToTree23/submodules/BTree/nodeOfBTree.o subprojects/LibToTree23/submodules/BTree/btree.o tree23.o program.o
-SRCS := subprojects/LibToTree23/submodules/BTree/nodeOfBTree.cpp subprojects/LibToTree23/submodules/BTree/btree.cpp tree23.cpp program.cpp
+URLOFLIB := subprojects/LibToTree23/submodules/BTree
+OBJS := $(URLOFLIB)/nodeOfBTree.o $(URLOFLIB)/btree.o tree23.o program.o
+SRCS := $(URLOFLIB)/nodeOfBTree.cpp $(URLOFLIB)/btree.cpp tree23.cpp program.cpp
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS) $(SRCS)
 	@echo 'Building ' $(TARGET)
-	@g++ -Isubprojects/LibToTree23/submodules/BTree/ -o $(TARGET) $(OBJS)
+	@g++ -I$(URLOFLIB)/ -o $(TARGET) $(OBJS)
 	@echo 'End of build'
 	
 %.o: %.cpp
 	@echo 'Building $@ from $<'
-	@g++ -Isubprojects/LibToTree23/submodules/BTree/ -o $@ -c $<
+	@g++ -I$(URLOFLIB)/ -o $@ -c $<
 	
 clean:
 	@echo "cleaning"
-	$(RM) $(OBJS) $(TARGET) subprojects/LibToTree23/submodules/BTree/*.o subprojects/LibToTree23/submodules/BTree/$(TARGET)
+	$(RM) $(OBJS) $(TARGET) $(URLOFLIB)/*.o $(URLOFLIB)/$(TARGET)
