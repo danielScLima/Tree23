@@ -1,5 +1,7 @@
 23Tree
 ====================
+Building with AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/3m4ml463twtk5wl1?svg=true)](https://ci.appveyor.com/project/DanielSLima/tree23)
+
 Building with Travis: [![Build Status](https://www.travis-ci.com/danielScLima/Tree23.svg?branch=master)](https://www.travis-ci.com/danielScLima/Tree23)
 
 This repository has a project with the implementation of a 23Tree.
