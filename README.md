@@ -1,5 +1,6 @@
 23Tree
 ====================
+Building with Travis: [![Build Status](https://www.travis-ci.com/danielScLima/Tree23.svg?branch=master)](https://www.travis-ci.com/danielScLima/Tree23)
 
 This repository has a project with the implementation of a 23Tree.
 
